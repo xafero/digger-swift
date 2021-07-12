@@ -54,9 +54,9 @@ class Scores {
             return
         }
 
-        var inx = [String]()
+        var inx = [String](repeating: "", count: 12)
 
-        var scx = [Int]()
+        var scx = [Int](repeating: 0, count: 12)
 
         var i: Int = 0
 
