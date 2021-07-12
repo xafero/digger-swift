@@ -165,9 +165,9 @@ class Pc {
         var w = wConst
         var h = hConst
 
-        var spr: [Int16] = cgagrafx.cgatable[ch * 2]
+        var spr: [Int16] = CgaGrafx.cgatable[ch * 2]
 
-        var msk: [Int16] = cgagrafx.cgatable[ch * 2 + 1]
+        var msk: [Int16] = CgaGrafx.cgatable[ch * 2 + 1]
 
         var src: Int = 0
 
@@ -225,23 +225,23 @@ class Pc {
         var plus: Int = 0
 
         while true {
-            if src >= cgagrafx.cgatitledat.count {
+            if src >= CgaGrafx.cgatitledat.count {
                 break
             }
 
-            var b = Int(cgagrafx.cgatitledat[src])
+            var b = Int(CgaGrafx.cgatitledat[src])
             src += 1
             var l: Int = 0
             var c: Int = 0
 
             if b == 0xFE {
-                l = Int(cgagrafx.cgatitledat[src])
+                l = Int(CgaGrafx.cgatitledat[src])
                 src += 1
                 if l == 0 {
                     l = 256
                 }
 
-                c = Int(cgagrafx.cgatitledat[src])
+                c = Int(CgaGrafx.cgatitledat[src])
                 src += 1
             } else {
                 l = 1
@@ -306,7 +306,7 @@ class Pc {
             return
         }
 
-        var chartab: [Int16] = alpha.ascii2cga[ch]!
+        var chartab: [Int16] = Alpha.ascii2cga[ch]!
 
         if chartab == nil {
             return

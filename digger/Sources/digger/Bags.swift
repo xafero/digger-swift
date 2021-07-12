@@ -4,11 +4,11 @@ import Foundation
 class Bags {
     var dig: Digger
 
-    var bagdat1: [_bag] = [_bag(), _bag(), _bag(), _bag(), _bag(), _bag(), _bag(), _bag()]
+    var bagdat1: [BagData] = [BagData(), BagData(), BagData(), BagData(), BagData(), BagData(), BagData(), BagData()]
 
-    var bagdat2: [_bag] = [_bag(), _bag(), _bag(), _bag(), _bag(), _bag(), _bag(), _bag()]
+    var bagdat2: [BagData] = [BagData(), BagData(), BagData(), BagData(), BagData(), BagData(), BagData(), BagData()]
 
-    var bagdat: [_bag] = [_bag(), _bag(), _bag(), _bag(), _bag(), _bag(), _bag(), _bag()]
+    var bagdat: [BagData] = [BagData(), BagData(), BagData(), BagData(), BagData(), BagData(), BagData(), BagData()]
 
     var pushcount: Int = 0
 

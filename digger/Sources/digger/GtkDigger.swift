@@ -56,7 +56,7 @@ class GtkDigger {
         return _digger!.keyDown(key)
     }
 
-    func create_refresher(_: Digger, _ model: IndexColorModel) -> GtkRefresher {
+    func create_refresher(_: Digger, _ model: ColorModel) -> GtkRefresher {
         return GtkRefresher(self, model)
     }
 

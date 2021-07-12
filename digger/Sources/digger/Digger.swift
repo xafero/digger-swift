@@ -18,10 +18,6 @@ class Digger {
 
     var subaddr: String = ""
 
-    var pic: Image?
-
-    var picg: Graphics?
-
     var Bags: Bags?
 
     var Main: Main?
@@ -436,7 +432,7 @@ class Digger {
 
         var i: Int = 0
         while i < 2 {
-            let model = IndexColorModel(8, 4, Pc!.pal[i][0], Pc!.pal[i][1], Pc!.pal[i][2])
+            let model = ColorModel(8, 4, Pc!.pal[i][0], Pc!.pal[i][1], Pc!.pal[i][2])
             Pc!.source[i] = pgtk!.create_refresher(self, model)
             Pc!.source[i].set_animated(true)
             Pc!.source[i].newPixels()
@@ -596,12 +592,6 @@ class Digger {
         Pc!.currentSource.newPixels()
     }
 
-    func paint(_ gConst: Graphics) {
-        var g = gConst
-
-        update(g)
-    }
-
     func reversedir(_ dirConst: Int) -> Int {
         var dir = dirConst
 
@@ -627,12 +617,6 @@ class Digger {
 
     func start() {
         pgtk!.requestFocus()
-    }
-
-    func update(_ gConst: Graphics) {
-        var g = gConst
-
-        // g.drawImage(Pc!.currentImage, 0, 0, self)
     }
 
     func updatedigger() {

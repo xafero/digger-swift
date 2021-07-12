@@ -6,7 +6,7 @@ class Main {
 
     var digsprorder: [Int] = [14, 13, 7, 6, 5, 4, 3, 2, 1, 12, 11, 10, 9, 8, 15, 0]
 
-    var gamedat: [_game] = [_game(), _game()]
+    var gamedat: [GameData] = [GameData(), GameData()]
 
     var pldispbuf: String = ""
 

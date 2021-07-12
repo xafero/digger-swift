@@ -28,8 +28,8 @@ enum Launcher {
             win.add(widget: pgtk.area)
             win.showAll()
 
-            win.onKeyPressEvent(handler: K.Press(game))
-            win.onKeyReleaseEvent(handler: K.Release(game))
+            win.onKeyPressEvent(handler: Keyboard.Press(game))
+            win.onKeyReleaseEvent(handler: Keyboard.Release(game))
         }
 
         guard let status = status else {

@@ -1,7 +1,7 @@
 
 import Foundation
 
-class alpha {
+class Alpha {
     static var copyright: String = "Portions Copyright(c) 1983 Windmill Software Inc."
 
     static var textoffdat: [Int] = [72, 0, -72, -72, 144, 0, -288, 144, 144, -216, 144, -72, 144, -216, -72, 144]

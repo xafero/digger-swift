@@ -1,5 +1,5 @@
 
-class IndexColorModel {
+class ColorModel {
     var bits: Int
     var size: Int
     var red: [UInt8]

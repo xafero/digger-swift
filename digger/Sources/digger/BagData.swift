@@ -1,7 +1,7 @@
 
 import Foundation
 
-class _bag {
+class BagData {
     var x: Int = 0
 
     var y: Int = 0
@@ -28,7 +28,7 @@ class _bag {
 
     var exist: Bool = false
 
-    func copyFrom(_ tConst: _bag) {
+    func copyFrom(_ tConst: BagData) {
         var t = tConst
 
         x = t.x

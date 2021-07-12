@@ -1,7 +1,7 @@
 
 import Foundation
 
-class _monster {
+class MonsterData {
     var x: Int = 0
 
     var y: Int = 0

@@ -3,9 +3,9 @@ import Gtk
 
 class GtkRefresher {
     static var _area: GtkDigger?
-    var Model: IndexColorModel?
+    var Model: ColorModel?
 
-    init(_ area: GtkDigger, _ model: IndexColorModel) {
+    init(_ area: GtkDigger, _ model: ColorModel) {
         GtkRefresher._area = area
         Model = model
     }
@@ -14,7 +14,7 @@ class GtkRefresher {
         Model = nil
     }
 
-    func get_model() -> IndexColorModel {
+    func get_model() -> ColorModel {
         return Model!
     }
 

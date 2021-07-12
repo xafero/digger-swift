@@ -2,11 +2,11 @@ import Gdk
 import Glibc
 import Gtk
 
-enum K {
+enum Keyboard {
     static func Press(_ d: Digger) -> ((WidgetRef, EventKeyRef) -> Bool) {
         return { _, ev in
             let key_event = ev.keyval
-            let num = K.convert_to_legacy(key_event)
+            let num = Keyboard.convert_to_legacy(key_event)
             if num >= 0 {
                 d.keyDown(Int(num))
             }
@@ -17,7 +17,7 @@ enum K {
     static func Release(_ d: Digger) -> ((WidgetRef, EventKeyRef) -> Bool) {
         return { _, ev in
             let key_event = ev.keyval
-            let num = K.convert_to_legacy(key_event)
+            let num = Keyboard.convert_to_legacy(key_event)
             if num >= 0 {
                 d.keyUp(Int(num))
             }

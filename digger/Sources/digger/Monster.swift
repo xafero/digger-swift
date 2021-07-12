@@ -4,7 +4,7 @@ import Foundation
 class Monster {
     var dig: Digger
 
-    var mondat: [_monster] = [_monster(), _monster(), _monster(), _monster(), _monster(), _monster()]
+    var mondat: [MonsterData] = [MonsterData(), MonsterData(), MonsterData(), MonsterData(), MonsterData(), MonsterData()]
 
     var nextmonster: Int = 0
 

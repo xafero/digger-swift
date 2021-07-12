@@ -1,7 +1,7 @@
 
 import Foundation
 
-class _game {
+class GameData {
     var lives: Int = 0
 
     var level: Int = 0
