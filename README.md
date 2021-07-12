@@ -6,8 +6,8 @@ Digger Remastered (Swift / GTK3)
 
 ## Requirements
 sudo apt install libgtk-3-dev gir1.2-gtksource-3.0 gobject-introspection libgirepository1.0-dev libxml2-dev jq
+
 ./run-gir2swift.sh
 
 ## Build
 swift build
-
