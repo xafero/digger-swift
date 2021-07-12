@@ -62,8 +62,8 @@ class Pc {
             var j: Int = 0
 
             while j < w {
-                let pVal = ((((((self.pixels[d] << 2) | self.pixels[d + 1]) << 2) 
-                                    | self.pixels[d + 2]) << 2) | self.pixels[d + 3])
+                let pVal = ((((((pixels[d] << 2) | pixels[d + 1]) << 2)
+                        | pixels[d + 2]) << 2) | pixels[d + 3])
                 p[src] = Int16(pVal)
                 src += 1
                 d += 4
@@ -95,7 +95,6 @@ class Pc {
         var inten = intenConst
 
         currentSource = source[inten & 1]
-        // currentImage = image[inten & 1]
         currentSource.newPixels()
     }
 

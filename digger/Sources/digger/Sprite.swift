@@ -172,12 +172,17 @@ class Sprite {
         var bwid = bwidConst
         var bhei = bheiConst
 
-        sprnch[n & 15] = ch; sprch[n & 15] = ch
+        sprnch[n & 15] = ch
+        sprch[n & 15] = ch
         sprmov[n & 15] = mov
-        sprnwid[n & 15] = wid; sprwid[n & 15] = wid
-        sprnhei[n & 15] = hei; sprhei[n & 15] = hei
-        sprnbwid[n & 15] = bwid; sprbwid[n & 15] = bwid
-        sprnbhei[n & 15] = bhei; sprbhei[n & 15] = bhei
+        sprnwid[n & 15] = wid
+        sprwid[n & 15] = wid
+        sprnhei[n & 15] = hei
+        sprhei[n & 15] = hei
+        sprnbwid[n & 15] = bwid
+        sprbwid[n & 15] = bwid
+        sprnbhei[n & 15] = bhei
+        sprbhei[n & 15] = bhei
         sprenf[n & 15] = false
     }
 

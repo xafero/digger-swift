@@ -24,7 +24,7 @@ class GtkRefresher {
 
     func newPixels() {
         timeout(add: 0) {
-            if let d = GtkRefresher._area {                
+            if let d = GtkRefresher._area {
                 d.area.queueDraw()
             }
             return false

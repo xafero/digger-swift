@@ -274,7 +274,8 @@ class Monster {
         var mon = monConst
 
         if mondat[mon].flag {
-            mondat[mon].flag = false; mondat[mon].alive = false
+            mondat[mon].flag = false
+            mondat[mon].alive = false
             dig.Sprite!.erasespr(mon + 8)
             if dig.bonusmode {
                 totalmonsters += 1
@@ -361,7 +362,7 @@ class Monster {
                     mdirp3 = 2
                 }
             }
- 
+
             if dig.bonusmode {
                 t = mdirp1
                 mdirp1 = mdirp4
@@ -390,14 +391,12 @@ class Monster {
                 mdirp4 = dir
             }
 
- 
             if dig.Main!.randno(dig.Main!.levof10() + 5) == 1, dig.Main!.levof10() < 6 {
                 t = mdirp1
                 mdirp1 = mdirp3
                 mdirp3 = t
             }
 
- 
             if fieldclear(mdirp1, mondat[mon].h, mondat[mon].v) {
                 dir = mdirp1
             } else if fieldclear(mdirp2, mondat[mon].h, mondat[mon].v) {
@@ -408,7 +407,6 @@ class Monster {
                 dir = mdirp4
             }
 
- 
             if !mondat[mon].nob {
                 dir = mdirp1
             }

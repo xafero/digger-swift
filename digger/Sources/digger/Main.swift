@@ -155,7 +155,7 @@ class Main {
         dig.Scores!.loadscores()
         dig.Sound!.initsound()
         dig.Scores!.run()
-        // dig.Scores!.updatescores(dig.Scores!.scores)
+        dig.Scores!.updatescores(dig.Scores!.scores)
         nplayers = 1
         repeat {
             dig.Sound!.soundstop()
@@ -305,7 +305,8 @@ class Main {
 
                 if gamedat[1 - curplayer].lives != 0 {
                     curplayer = 1 - curplayer
-                    flashplayer = true; levnotdrawn = true
+                    flashplayer = true
+                    levnotdrawn = true
                 }
             }
 
@@ -363,7 +364,7 @@ class Main {
         dig.Sound!.music(1)
         dig.Input!.readdir()
         dig.time = dig.Pc!.gethrt()
- 
+
         while !gamedat[curplayer].dead, !gamedat[curplayer].levdone, !dig.Input!.escape {
             penalty = 0
             dig.dodigger()
@@ -435,10 +436,10 @@ class Main {
     func randno(_ nConst: Int) -> Int {
         var n = nConst
 
-        let randNum = Int.random(in: 2516820..<2146795942)
-        self.randv = randNum
+        let randNum = Int.random(in: 2_516_820 ..< 2_146_795_942)
+        randv = randNum
 
-        return (self.randv) % n
+        return (randv) % n
     }
 
     func setdead(_ bp6Const: Bool) {

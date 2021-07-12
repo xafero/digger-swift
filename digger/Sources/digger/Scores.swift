@@ -4,7 +4,7 @@ import Foundation
 class Scores {
     var dig: Digger
 
-    var scores: [ScoreTuple] = [ScoreTuple](repeating: ScoreTuple("...",0), count: 11)
+    var scores = [ScoreTuple](repeating: ScoreTuple("...", 0), count: 11)
 
     var substr: String = ""
 
@@ -42,12 +42,7 @@ class Scores {
         var n = nConst
         var s = sConst
 
-        if dig.subaddr != nil {
-            // var ms : Int = 16 + (                 System.currentTimeMillis() % ( 65536 - 16 ) ) as Int
-
-            // substr = n + "+" + s + "+" + ms + "+" + ( ( ms + 32768 ) * s ) % 65536
-            // Thread(self).start()
-        }
+        if dig.subaddr != nil {}
 
         return scores
     }
@@ -360,21 +355,7 @@ class Scores {
     }
 
     func run() {
-        /*var br = BufferedReader()
-
-        var sc = [ScoreTuple]()
-
-        var i: Int = 0
-
-        while i < 10 {
-            sc[i].name = br.readLine()
-            sc[i].score = Int(br.readLine())!
-
-            i += 1
-        }
-
-        br.close()
-        scores = sc*/
+        // TODO:
     }
 
     func scorebonus() {

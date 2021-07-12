@@ -213,7 +213,8 @@ class Sound {
         if noteduration != 0 {
             noteduration -= 1
         } else {
-            musicstage = 0; musicn = 0
+            musicstage = 0
+            musicn = 0
             switch tuneno {
             case 0:
                 musicnotewidth = noteduration - 3
@@ -420,7 +421,7 @@ class Sound {
                 soundddieoff()
             }
 
-            t2val = (soundddievalue)
+            t2val = soundddievalue
         }
     }
 
@@ -440,7 +441,7 @@ class Sound {
             if soundeatmn != 0 {
                 if soundeatmduration != 0 {
                     if (soundeatmduration % 4) == 1 {
-                        t2val = (soundeatmvalue)
+                        t2val = soundeatmvalue
                     }
 
                     if (soundeatmduration % 4) == 3 {
@@ -506,7 +507,7 @@ class Sound {
         if soundemeraldflag {
             if soundemeraldduration != 0 {
                 if soundemeraldn == 0 || soundemeraldn == 1 {
-                    t2val = (emerfreq)
+                    t2val = emerfreq
                 }
 
                 soundemeraldn += 1
@@ -545,7 +546,7 @@ class Sound {
     func soundexplodeupdate() {
         if soundexplodeflag {
             if soundexplodeduration != 0 {
-                soundexplodevalue = soundexplodevalue - (soundexplodevalue >> 3); 
+                soundexplodevalue = soundexplodevalue - (soundexplodevalue >> 3)
                 t2val = (soundexplodevalue - (soundexplodevalue >> 3))
                 soundexplodeduration -= 1
             } else {
@@ -569,7 +570,7 @@ class Sound {
             if soundfalln < 1 {
                 soundfalln += 1
                 if soundfallf {
-                    t2val = (soundfallvalue)
+                    t2val = soundfallvalue
                 }
             } else {
                 soundfalln = 0
@@ -630,10 +631,10 @@ class Sound {
 
             if soundgoldf {
                 soundgoldf = false
-                t2val = (soundgoldvalue1)
+                t2val = soundgoldvalue1
             } else {
                 soundgoldf = true
-                t2val = (soundgoldvalue2)
+                t2val = soundgoldvalue2
             }
 
             soundgoldvalue1 += (soundgoldvalue1 >> 4)
@@ -644,7 +645,8 @@ class Sound {
     func soundint() {
         timerclock += 1
         if soundflag, !sndflag {
-            sndflag = true; musicflag = true
+            sndflag = true
+            musicflag = true
         }
 
         if !soundflag, sndflag {
@@ -687,13 +689,14 @@ class Sound {
     }
 
     func soundlevdoneoff() {
-        soundlevdoneflag = false; soundpausedflag = false
+        soundlevdoneflag = false
+        soundpausedflag = false
     }
 
     func soundlevdoneupdate() {
         if sndflag {
             if nljpointer < 11 {
-                t2val = (newlevjingle[nljpointer])
+                t2val = newlevjingle[nljpointer]
             }
 
             t0val = Int(t2val + 35)

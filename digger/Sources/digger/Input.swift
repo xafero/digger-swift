@@ -84,7 +84,8 @@ class Input {
 
     func detectjoy() {
         joyflag = false
-        staticdir = -1; dynamicdir = -1
+        staticdir = -1
+        dynamicdir = -1
     }
 
     func getasciikey(_ makeConst: Int) -> Int {
@@ -112,7 +113,8 @@ class Input {
 
     func Key_downpressed() {
         downpressed = true
-        dynamicdir = 6; staticdir = 6
+        dynamicdir = 6
+        staticdir = 6
     }
 
     func Key_downreleased() {
@@ -133,7 +135,8 @@ class Input {
 
     func Key_leftpressed() {
         leftpressed = true
-        dynamicdir = 4; staticdir = 4
+        dynamicdir = 4
+        staticdir = 4
     }
 
     func Key_leftreleased() {
@@ -145,7 +148,8 @@ class Input {
 
     func Key_rightpressed() {
         rightpressed = true
-        dynamicdir = 0; staticdir = 0
+        dynamicdir = 0
+        staticdir = 0
     }
 
     func Key_rightreleased() {
@@ -157,7 +161,8 @@ class Input {
 
     func Key_uppressed() {
         uppressed = true
-        dynamicdir = 2; staticdir = 2
+        dynamicdir = 2
+        staticdir = 2
     }
 
     func Key_upreleased() {
@@ -234,19 +239,23 @@ class Input {
     func setdirec() {
         dynamicdir = -1
         if uppressed {
-            dynamicdir = 2; staticdir = 2
+            dynamicdir = 2
+            staticdir = 2
         }
 
         if downpressed {
-            dynamicdir = 6; staticdir = 6
+            dynamicdir = 6
+            staticdir = 6
         }
 
         if leftpressed {
-            dynamicdir = 4; staticdir = 4
+            dynamicdir = 4
+            staticdir = 4
         }
 
         if rightpressed {
-            dynamicdir = 0; staticdir = 0
+            dynamicdir = 0
+            staticdir = 0
         }
     }
 

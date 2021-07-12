@@ -471,7 +471,8 @@ class Digger {
         Sprite!.movedrawspr(0, diggerx, diggery)
         notfiring = true
         emocttime = 0
-        bonusvisible = false; bonusmode = false
+        bonusvisible = false
+        bonusmode = false
         Input!.firepressed = false
         expsn = 0
         rechargetime = 0
@@ -638,11 +639,13 @@ class Digger {
         }
 
         if diggerrx == 0 && (ddir == 2 || ddir == 6) {
-            digdir = ddir; digmdir = ddir
+            digdir = ddir
+            digmdir = ddir
         }
 
         if diggerry == 0 && (ddir == 4 || ddir == 0) {
-            digdir = ddir; digmdir = ddir
+            digdir = ddir
+            digmdir = ddir
         }
 
         if dir == -1 {

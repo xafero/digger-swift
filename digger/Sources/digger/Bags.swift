@@ -300,8 +300,10 @@ class Bags {
 
         var push: Bool = true
 
-        ox = bagdat[bag].x; x = bagdat[bag].x
-        oy = bagdat[bag].y; y = bagdat[bag].y
+        ox = bagdat[bag].x
+        x = bagdat[bag].x
+        oy = bagdat[bag].y
+        y = bagdat[bag].y
         h = bagdat[bag].h
         v = bagdat[bag].v
         if bagdat[bag].gt != 0 {
