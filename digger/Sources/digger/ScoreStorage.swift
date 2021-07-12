@@ -10,7 +10,7 @@ class ScoreStorage {
     }
 
     static func writeToStorage(_ mem: Scores) -> Bool {
-        let outFilename: String = "digger.sco"
+        let (outFilename, _) = ScoreStorage.getScoreFile()
         let fileManager = FileManager.default
         fileManager.createFile(atPath: outFilename, contents: Data(" ".utf8), attributes: nil)
         let scoreinit = mem.scoreinit
@@ -29,14 +29,19 @@ class ScoreStorage {
         }
     }
 
-    private static func getScoreFile() -> String? {
+    private static func getScoreFile() -> (String, Bool) {
         let fileName = "digger.sco"
-        let bundle = Bundle.main.path(forResource: fileName, ofType: "txt")
-        return bundle
+        let fileManager = FileManager.default
+        let dir = fileManager.currentDirectoryPath
+        let full = dir + "/" + fileName
+        let exists = fileManager.fileExists(atPath: full)
+        let tup = (full, exists)
+        return tup
     }
 
     static func readFromStorage(_ mem: Scores) -> Bool {
-        if let path = ScoreStorage.getScoreFile() {
+        let (path, exists) = ScoreStorage.getScoreFile()
+        if exists {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
                 let lines = data.components(separatedBy: .newlines)
@@ -48,7 +53,8 @@ class ScoreStorage {
                     let score = Int(lines[i])
                     i += 1
                     let scoreUnp = score!
-                    sc[i] = ScoreTuple(name, scoreUnp)
+                    let index = (i / 2) - 1
+                    sc[index] = ScoreTuple(name, scoreUnp)
                 }
                 mem.scores = sc
                 return true

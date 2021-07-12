@@ -1,7 +1,4 @@
-import Gtk
 import Gdk
+import Gtk
 
-class GtkResources
-{
-
-}
+class GtkResources {}

@@ -327,11 +327,11 @@ class Digger {
     }
 
     func drawexplosion() {
-        switch expsn {            
+        switch expsn {
         case 1, 2, 3:
-                    if expsn == 1{
-                        Sound!.soundexplode()
-                    }
+            if expsn == 1 {
+                Sound!.soundexplode()
+            }
             Drawing!.drawfire(firex, firey, expsn)
             Main!.incpenalty()
             expsn += 1

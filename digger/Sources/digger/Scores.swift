@@ -47,9 +47,7 @@ class Scores {
         return scores
     }
 
-    func updatescores(_ oConst: [ScoreTuple]) {
-        var o = oConst
-
+    func updatescores(_ o: [ScoreTuple]) {
         if o == nil {
             return
         }
@@ -58,20 +56,14 @@ class Scores {
 
         var scx = [Int](repeating: 0, count: 12)
 
-        var i: Int = 0
-
-        while i < 10 {
+        for i in 0 ..< 10 {
             inx[i] = o[i].name
             scx[i] = o[i].score
-
-            i += 1
         }
 
-        while i < 10 {
+        for i in 0 ..< 10 {
             scoreinit[i + 1] = inx[i]
             scorehigh[i + 2] = scx[i]
-
-            i += 1
         }
     }
 
@@ -158,7 +150,7 @@ class Scores {
             getinitials()
             updatescores(submit(scoreinit[0], scoret))
             shufflehigh()
-            ScoreStorage.writeToStorage(self);
+            ScoreStorage.writeToStorage(self)
         } else {
             dig.Main!.cleartopline()
             dig.Drawing!.outtext("GAME OVER", 104, 0, 3, true)
@@ -355,9 +347,9 @@ class Scores {
         return p
     }
 
-    func  `init`() {
-	    if (!ScoreStorage.readFromStorage(self)){
-		    ScoreStorage.createInStorage(self);
+    func `init`() {
+        if !ScoreStorage.readFromStorage(self) {
+            ScoreStorage.createInStorage(self)
         }
     }
 
