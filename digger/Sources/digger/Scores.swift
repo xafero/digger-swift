@@ -158,6 +158,7 @@ class Scores {
             getinitials()
             updatescores(submit(scoreinit[0], scoret))
             shufflehigh()
+            ScoreStorage.writeToStorage(self);
         } else {
             dig.Main!.cleartopline()
             dig.Drawing!.outtext("GAME OVER", 104, 0, 3, true)
@@ -354,8 +355,10 @@ class Scores {
         return p
     }
 
-    func run() {
-        // TODO:
+    func  `init`() {
+	    if (!ScoreStorage.readFromStorage(self)){
+		    ScoreStorage.createInStorage(self);
+        }
     }
 
     func scorebonus() {
