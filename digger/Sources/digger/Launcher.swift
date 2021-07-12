@@ -1,4 +1,5 @@
 import Foundation
+import GdkPixbuf
 import Gtk
 
 @main
@@ -22,8 +23,8 @@ enum Launcher {
             win.setDefaultSize(width: w, height: h)
             win.set(position: WindowPosition.center)
 
-            // let icon = gtkcore.LoadGtkImage("icons/digger.png")
-            // win.SetIcon(icon)
+            let icon = GtkResources.LoadDiggerIcon()
+            win.set(icon: icon)
 
             win.add(widget: pgtk.area)
             win.showAll()
